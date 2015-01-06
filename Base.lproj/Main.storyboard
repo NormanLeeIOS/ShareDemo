@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dqN-RV-0XZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="WsZ-ff-4iJ">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="dqN-RV-0XZ" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yVP-zn-ftD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VnO-aK-bKC" kind="relationship" relationship="rootViewController" id="2cn-G6-5DX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jq7-Ik-zVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="371"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Md3-od-AWU">
+            <objects>
+                <viewController id="VnO-aK-bKC" customClass="ViewController" customModule="Share" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tmu-2I-b1f"/>
+                        <viewControllerLayoutGuide type="bottom" id="AD5-uf-IoP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w68-pG-bjs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62t-UF-ZkG">
+                                <rect key="frame" x="110" y="50" width="100" height="50"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IRi-K9-X0U"/>
+                                    <constraint firstAttribute="width" constant="100" id="eN6-8H-zW7"/>
+                                </constraints>
+                                <state key="normal" title="自定义分享">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="customShare:" destination="VnO-aK-bKC" eventType="touchUpInside" id="IUr-eD-dfH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="62t-UF-ZkG" firstAttribute="top" secondItem="Tmu-2I-b1f" secondAttribute="bottom" constant="50" id="6EB-hA-tFk"/>
+                            <constraint firstAttribute="centerX" secondItem="62t-UF-ZkG" secondAttribute="centerX" id="sNL-wx-NY8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xRu-bc-OLt"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOg-He-V7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1178" y="371"/>
+        </scene>
+    </scenes>
+</document>
