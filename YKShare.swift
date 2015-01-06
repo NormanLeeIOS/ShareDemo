@@ -11,6 +11,18 @@ import UIKit
 
 class YKShare {
     
+    /**
+    设置分享的内容
+    
+    @param ViewController   分享到目的VC
+    @param wechatURL    微信点击后进入的网页URL字符串
+    @param momentURL    朋友圈点击后进入的网页URL字符串
+    @param shareURLString   分享的文章网页URL字符串
+    @param content  分享标题显示的文字
+    @param imageURLString   图片URL的字符串
+    @param defaultImage     若没有图片时，默认的图片
+    
+    */
     class func showCustomShareViewController(ViewController: UIViewController, wechatURL: String?, momentURL: String?, shareURLString: String!, content: String?, imageURLString: String?, defaultImage: UIImage?){
         var shareViewController: ShareViewController!
         var shareView:UIView!

@@ -32,6 +32,7 @@ class ViewController: UIViewController {
 
     @IBAction func customShare(sender: AnyObject) {
         
+        // 调用分享
         YKShare.showCustomShareViewController(self, wechatURL: nil, momentURL: nil, shareURLString: "www.baidu.com", content: "百度", imageURLString: "http://images.china.cn/attachement/jpg/site1001/20141215/00016c42b3f515f8eb9601.jpg", defaultImage: nil)
         
     }//share
