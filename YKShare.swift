@@ -11,21 +11,9 @@ import UIKit
 
 class YKShare {
     
-
-    
-    
     class func showCustomShareViewController(ViewController: UIViewController, wechatURL: String?, momentURL: String?, shareURLString: String!, content: String?, imageURLString: String?, defaultImage: UIImage?){
         var shareViewController: ShareViewController!
         var shareView:UIView!
-        
-        //        if self.newsItem.titleImageURL != nil && newsItem.titleImageURL != ""{
-        //            var shareImageURL = NSURL(string: self.newsItem.titleImageURL!)
-        //            shareImage = UIImage(data: NSData(contentsOfURL: shareImageURL!)!)
-        //        }
-        //        else{
-        //            shareImage = UIImage(named: "aboutus_avatar")!
-        //        }
-        
 
         //设置点击分享内容跳转链接
         //当分享消息类型为图文时，点击分享内容会跳转到预设的链接，设置方法如下

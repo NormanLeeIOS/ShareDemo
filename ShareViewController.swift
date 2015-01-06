@@ -57,7 +57,7 @@ class ShareViewController: UIViewController, UMSocialUIDelegate{
     }
 
     @IBAction func onClickSinaButton(sender: AnyObject) {
-       // NSNotificationCenter.defaultCenter().postNotificationName("customShare", object: nil, userInfo: ["index": "1"])
+        NSNotificationCenter.defaultCenter().postNotificationName("customShare", object: nil, userInfo: ["index": "1"])
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.view.alpha = 0.0
             }, completion: { (Bool) -> Void in
@@ -67,7 +67,7 @@ class ShareViewController: UIViewController, UMSocialUIDelegate{
     }
     
     @IBAction func onClickTencentButton(sender: AnyObject) {
-       // NSNotificationCenter.defaultCenter().postNotificationName("customShare", object: nil, userInfo: ["index": "2"])
+       NSNotificationCenter.defaultCenter().postNotificationName("customShare", object: nil, userInfo: ["index": "2"])
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.view.alpha = 0.0
             }, completion: { (Bool) -> Void in
@@ -97,7 +97,7 @@ class ShareViewController: UIViewController, UMSocialUIDelegate{
     }
     
     @IBAction func onClickFacebookButton(sender: AnyObject) {
-      //  NSNotificationCenter.defaultCenter().postNotificationName("customShare", object: nil, userInfo: ["index": "5"])
+       NSNotificationCenter.defaultCenter().postNotificationName("customShare", object: nil, userInfo: ["index": "5"])
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.view.alpha = 0.0
             }, completion: { (Bool) -> Void in
@@ -118,21 +118,6 @@ class ShareViewController: UIViewController, UMSocialUIDelegate{
     // 自定义分享功能实现
     // 感谢宋志明的贡献
     func customShare(notification : NSNotification){
-        
-        // 1、分享的文字
-        // var shareText: NSString! = self.newsItem.title! + "文章来自 礼拜指南 点击查看详情" + self.newsItem.URL!
-        // 2、分享的图片（若为空，则设置为nil）
-//        var shareImageURL = NSURL(string: "http://images.china.cn/attachement/jpg/site1001/20141215/00016c42b3f515f8eb9601.jpg")
-//        var shareImage: UIImage! = UIImage(data: NSData(contentsOfURL: shareImageURL!)!)
-//        var shareText = "SBSBSBSBSBSB"
-//        if self.newsItem.titleImageURL != nil && newsItem.titleImageURL != ""{
-//            var shareImageURL = NSURL(string: self.newsItem.titleImageURL!)
-//            shareImage = UIImage(data: NSData(contentsOfURL: shareImageURL!)!)
-//        }
-//        else{
-//            shareImage = UIImage(named: "aboutus_avatar")!
-//        }
-        
         
         switch (notification.userInfo?["index"] as String)
         {
@@ -242,6 +227,7 @@ class ShareViewController: UIViewController, UMSocialUIDelegate{
             // show the feed dialog
             FBWebDialogs.presentFeedDialogModallyWithSession(nil, parameters: paramsDic, handler: {
                 result, resultURL, error in
+                println(error)
                 if  error != nil
                 {
                     HYBProgressHUD.showError("Failed!")
