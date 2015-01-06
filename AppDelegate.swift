@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UMSocialWechatHandler.setWXAppId("wxd930ea5d5a258f4f", appSecret: "db426a9829e4b49a0dcac7b4162da6b6", url: nil)
         
         //设置facebook应用ID，和分享纯文字用到的url地址
-        //UMSocialFacebookHandler.setFacebookAppID("91136964205", shareFacebookWithURL: nil)
+      //  UMSocialFacebookHandler.setFacebookAppID("91136964205", shareFacebookWithURL: nil)
         
         //打开twitter
         UMSocialTwitterHandler.openTwitter()

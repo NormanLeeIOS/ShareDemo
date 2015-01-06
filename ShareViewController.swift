@@ -77,7 +77,7 @@ class ShareViewController: UIViewController, UMSocialUIDelegate{
     }
     
     @IBAction func onClickWechatButton(sender: AnyObject) {
-      //  NSNotificationCenter.defaultCenter().postNotificationName("customShare", object: nil, userInfo: ["index": "3"])
+       // NSNotificationCenter.defaultCenter().postNotificationName("customShare", object: nil, userInfo: ["index": "3"])
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.view.alpha = 0.0
             }, completion: { (Bool) -> Void in
